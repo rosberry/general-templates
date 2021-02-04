@@ -1,0 +1,5 @@
+files:
+- template: Code/Button.swift.stencil
+- template: preview/config.stencil
+  output: Classes/Core/PreviewConfig.swift
+suffix: Button
