@@ -1,5 +1,5 @@
-project: Test.xcodeproj
-company: Rosberry
+xcode:
+  company: Rosberry
 outputs:
 - templateName: rsb_mvp_vm_module
   path: Classes/Presentation/Modules
