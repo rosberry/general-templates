@@ -1,0 +1,4 @@
+Given User is on {{ Screen }} screen
+And User sees {{ SeeingView }}
+When User {{ Action }} in {{ ActionTarget }}
+Then {{ Result }}
