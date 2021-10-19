@@ -2,24 +2,14 @@
 
 import GenericModule
 
-protocol {{ name | upperFirstLetter }}ModuleInput: ModuleInput<{{ name | upperFirstLetter }}State> {
+protocol {{ name | upperFirstLetter }}ModuleInput {
 
 }
 
-protocol {{ name | upperFirstLetter }}ModuleOutput: class {
-
-    func {{ name | lowerFirstLetter }}ModuleClosed(_ moduleInput: {{ name | upperFirstLetter }}ModuleInput)
+protocol {{ name | upperFirstLetter }}ModuleOutput {
 }
 
-{%align%}final class {{ name | upperFirstLetter }}Module: GenericModule.Module<{%anchor%}{{ name | upperFirstLetter }}State,
-                                                                               {{ name | upperFirstLetter }}ViewModel,
-                                                                               {{ name | upperFirstLetter }}ViewController>{%endalign%} {
-    typealias Dependencies = Any
-    typealias Presenter = {{ name | upperFirstLetter }}Module.ModulePresenter<{{ name | upperFirstLetter }}ModuleOutput, Dependencies> &
-                          {{ name | upperFirstLetter }}ModuleInput &
-                          {{ name | upperFirstLetter }}ViewOutput
+typealias {{ name | upperFirstLetter }}ModuleDependencies = Any
 
-    override func makeInput() -> BasePresenter {
-        {{ name | upperFirstLetter }}Presenter(state: state, dependencies: [])
-    }
+final class {{ name | upperFirstLetter }}Module: Module<{{ name | upperFirstLetter }}Presenter> {
 }

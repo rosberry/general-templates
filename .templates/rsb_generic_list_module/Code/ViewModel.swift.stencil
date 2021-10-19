@@ -1,7 +1,18 @@
 {% include "header.stencil" %}
 
 import GenericModule
+import CollectionViewTools
 
-final class {{ name | upperFirstLetter }}ViewModel: FactoryViewModel<{{ name | upperFirstLetter }}ListItemsFactory> {
+protocol {{ name | upperFirstLetter }}ViewModelDelegate: AnyObject {
+    var state: {{ name | upperFirstLetter }}State { get }
+    func makeSectionItems() -> [GeneralCollectionViewDiffSectionItem]
+}
 
+final class {{ name | upperFirstLetter }}ViewModel: ViewModel {
+
+    let listSectionItems: [GeneralCollectionViewDiffSectionItem]
+
+    init(delegate: {{ name | upperFirstLetter }}ViewModelDelegate) {
+        listSectionItems = delegate.makeSectionItems()
+    }
 }
