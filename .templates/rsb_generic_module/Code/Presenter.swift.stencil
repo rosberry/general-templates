@@ -2,6 +2,25 @@
 
 import GenericModule
 
-final class {{ name | upperFirstLetter }}Presenter: {{ name | upperFirstLetter }}Module.Presenter {
+{%align%}final class MainPresenter: Presenter<{%anchor%}{{ name | upperFirstLetter }}State,
+                                       		 {{ name | upperFirstLetter }}ViewController,
+                                       		 {{ name | upperFirstLetter }}ModuleInput,
+                                       		 {{ name | upperFirstLetter }}ModuleOutput,
+                                       		 {{ name | upperFirstLetter }}ModuleDependencies>{%endalign%} {
 
+}
+
+extension MainPresenter: {{ name | upperFirstLetter }}ViewOutput {
+
+}
+
+extension MainPresenter: {{ name | upperFirstLetter }}ModuleInput {
+
+}
+
+extension MainPresenter: {{ name | upperFirstLetter }}ModuleOutput {
+
+}
+
+extension MainPresenter: {{ name | upperFirstLetter }}ViewModelDelegate {
 }

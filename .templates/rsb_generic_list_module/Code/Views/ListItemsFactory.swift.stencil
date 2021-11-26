@@ -3,12 +3,12 @@
 import GenericModule
 import CollectionViewTools
 
-{%align%}final class {{ name | upperFirstLetter }}ListItemsFactory: GenericSectionItemsFactory<{%anchor%}{{ name | upperFirstLetter }}State,
+{%align%}final class {{ name | upperFirstLetter }}ListItemsFactory: GenericSectionItemsFactory<{%anchor%}{{ name | upperFirstLetter }}ViewModelDelegate,
                                                                                                GeneralCollectionViewDiffSectionItem,
                                                                                                {{ name | upperFirstLetter }}ModuleDependencies,
                                                                                                {{ name | upperFirstLetter }}ViewOutput>{%endalign%} {
 
-    override func makeSectionItems(state: {{ name | upperFirstLetter }}State) -> [GeneralCollectionViewDiffSectionItem] {
+    override func makeSectionItems(delegate: {{ name | upperFirstLetter }}ViewModelDelegate) -> [GeneralCollectionViewDiffSectionItem] {
         []
     }
 }

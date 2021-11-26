@@ -2,6 +2,13 @@
 
 import GenericModule
 
-final class {{ name | upperFirstLetter }}ViewModel: ViewModel<{{ name | upperFirstLetter }}State> {
+protocol {{ name | upperFirstLetter }}ViewModelDelegate: AnyObject {
+    var state: MainState { get }
+}
 
+final class {{ name | upperFirstLetter }}ViewModel: ViewModel {
+
+    init(delegate: {{ name | upperFirstLetter }}ViewModelDelegate) {
+
+    }
 }
