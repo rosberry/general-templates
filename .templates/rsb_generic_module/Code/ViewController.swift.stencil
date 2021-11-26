@@ -7,7 +7,7 @@ protocol {{ name | upperFirstLetter }}ViewOutput: ViewOutput {
 
 }
 
-final class {{ name | upperFirstLetter}}ViewController: ViewController<{{ name | upperFirstLetter}}ViewModel, Any, {{ name | upperFirstLetter}}ViewOutput>{%endalign%} {
+final class {{ name | upperFirstLetter}}ViewController: ViewController<{{ name | upperFirstLetter}}ViewModel, Any, {{ name | upperFirstLetter}}ViewOutput> {
 
     // MARK: - Lifecycle
 
