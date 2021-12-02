@@ -75,5 +75,3 @@ extension {{ name | upperFirstLetter }}ViewController: {{ name | upperFirstLette
         collectionViewManager.update(with: viewModel.listSectionItems, animated: animated)
     }
 }
-
-{% include "preview/view_controller/basic.stencil" %}
