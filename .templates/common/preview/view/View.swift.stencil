@@ -28,30 +28,3 @@ final class {% call class %}: {% block superview %}UIView{% endblock %} {
 
     }
 }
-
-// MARK: - {% call class %} Xcode preview
-
-#if DEBUG
-
-import SwiftUI
-
-extension {% call class %}: UIViewRepresentable {
-    func makeUIView(context: Context) -> {% call class %} {
-        let {% call variable %} = {% call class %}()
-        return {% call variable %}
-    }
-
-    func updateUIView(_ uiViewController: {% call class %},
-                      context: Context) {
-    }
-}
-
-struct {% call class %}Previews: PreviewProvider {
-    static var previews: some View {
-        group(with: {% block configs%}[.init(name: "Default", layout: .device)]{% endblock %}) {
-            let {% call variable %} = {% call class %}()
-            return AnyView({% call variable %})
-        }
-    }
-}
-#endif
