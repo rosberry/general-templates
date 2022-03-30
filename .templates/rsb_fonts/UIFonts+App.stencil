@@ -1,0 +1,11 @@
+{% include "header.stencil" %}
+
+import UIKit
+
+extension UIFont {
+{% for name in fonts %}
+     static func {{name | fontFunction}}Font(ofSize size: CGFloat) -> UIFont? {
+         return .init(name: "{{name}}", size: size)
+     }
+{% endfor %}
+}
