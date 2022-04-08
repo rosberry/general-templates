@@ -1,5 +1,15 @@
 xcode:
   company: Rosberry
+font:
+  extensionFolderPath: ./Classes/Presentation/Extensions
+  extensionFontPath: ./Classes/Presentation/Extensions/UIFonts+App.swift
+  commonTemplatePath: ./.templates/common
+  commandTemplatePath: ./.templates
+  fontsFolderPath: ./Resources/Fonts
+  fontsTemplatePath: ./.templates/rsb_fonts
+  fontValue: UIAppFonts
+  fontTemplateName: UIFonts+App.stencil
+
 outputs:
 - templateName: rsb_mvp_vm_module
   path: Classes/Presentation/Modules
