@@ -3,11 +3,11 @@
 import Foundation
 
 typealias HasAllServices = /*mark:&
-                           Has{{name:upperFirstLetter}}Service*/
+                           Has{{serviceMark}}Service*/
 
 // swiftlint:disable:next identifier_name
 let Services: HasAllServices = ServicesFactory()
 
 private class ServicesFactory: ServiceFactory, HasAllServices {
-    /*mark: lazy var {{name:lowerFirstLetter}}Service: {{name:upperFirstLetter}}Service = provide({{name:upperFirstLetter}}ServiceImp.self, scope: .singleton)*/
+    /*mark: lazy var {{serviceMarkName}}Service: {{serviceMark}}Service = provide({{serviceMark}}ServiceImp.self, scope: .singleton)*/
 }

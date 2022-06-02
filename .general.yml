@@ -21,3 +21,6 @@ outputs:
   path: Classes/Presentation/Modules
 - templateName: rsb_service
   path: Classes/BusinessLogic/Services
+variables:
+- serviceMark: {{name:upperFirstLetter}}
+- serviceMarkName: {{name:lowerFirstLetter}}
