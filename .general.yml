@@ -9,7 +9,6 @@ font:
   fontsTemplatePath: ./.templates/rsb_fonts
   infoFontName: UIAppFonts
   fontTemplateName: UIFonts+App.stencil
-
 outputs:
 - templateName: rsb_mvp_vm_module
   path: Classes/Presentation/Modules
@@ -21,6 +20,6 @@ outputs:
   path: Classes/Presentation/Modules
 - templateName: rsb_service
   path: Classes/BusinessLogic/Services
-variables:
-- serviceMark: {{name:upperFirstLetter}}
-- serviceMarkName: {{name:lowerFirstLetter}}
+services:
+  serviceMark: "{{name | upperFirstLetter}}"
+  serviceMarkName: "{{name | lowerFirstLetter}}"
