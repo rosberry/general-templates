@@ -22,6 +22,7 @@ outputs:
   path: Classes/BusinessLogic/Services
 services:
   servicesPath: ./Classes/BusinessLogic/Services/Services.swift
-  serviceMark: '{{name | upperFirstLetter}}'
-  serviceMarkName: '{{name | lowerFirstLetter}}'
-  serviceMarkHas: '{% if isNewFile %}Has{{name | upperFirstLetter}}Service{% else %}                       Has{{name | upperFirstLetter}}Service{% endif %}'
+  serviceMarks:
+    serviceMark: '{{name | upperFirstLetter}}'
+    serviceMarkName: '{{name | lowerFirstLetter}}'
+    serviceMarkHas: '{% if isNewFile %}Has{{name | upperFirstLetter}}Service{% else %}                       Has{{name | upperFirstLetter}}Service{% endif %}'
